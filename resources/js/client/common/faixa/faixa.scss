@@ -1,0 +1,62 @@
+@import '../../../../sass/variables';
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.background {
+    background-image: url('../../assets/banner-predios.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 20px;
+}
+
+.card__title {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .card__subtitle {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* card - pseudo-element */
+  .card--pseudo-elements {
+    position: relative;
+  }
+  .card--pseudo-elements .card__title,
+  .card--pseudo-elements .card__subtitle {
+    z-index: 0;
+  }
+  .card--pseudo-elements:before {
+    content: '';
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: 200ms all;
+  }
+  .card--pseudo-elements:hover:before {
+    opacity: 0.9;
+  }
+  
+.box {
+    display: flex;
+    justify-content:space-around;
+  }
+
+.search{
+  padding: 10px 50px;
+}
